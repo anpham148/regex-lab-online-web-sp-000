@@ -1,5 +1,5 @@
 def starts_with_a_vowel?(word)
-   /\A[aeiouAEIOU]/.match(word) ? true : false
+   !!/\A[aeiouAEIOU]/.match(word) 
 end
 
 def words_starting_with_un_and_ending_with_ing(text)
@@ -12,7 +12,7 @@ def words_five_letters_long(text)
 end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
-
+text.match/^[A-Z][a-z]*[[:punct:]]$/
 end
 
 def valid_phone_number?(phone)
